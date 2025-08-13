@@ -1,10 +1,56 @@
 body {
   background-color: #1f2020;
+    font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+background: #423c3c;
+background: radial-gradient(circle, rgba(66, 60, 60, 1) 0%, rgba(0, 0, 0, 1) 100%);
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+nav ul {
+  flex-direction: column;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  gap: 1rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  padding: 8px 12px;
+  display: block;
+}
+
+/* 2. Tablet screens (min-width: 768px) */
+@media (min-width: 768px) {
+  body {
+    font-size: 18px; /* Slightly larger text */
+  }
+}
+
+/* 3. Desktop screens (min-width: 1024px) */
+@media (min-width: 1024px) {
+  nav ul {
+    justify-content: flex-end;
+  }
+}
+
+/* 4. Small screens (max-width: 768px) */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* Stack menu items */
+  }
 }
 
 .menu {
   padding: 0.5rem;
-  color: #675b5b;
+  color: #eb4604;
   position: relative;
   display: flex;
   justify-content: center;
@@ -92,16 +138,14 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* vertical center */
   align-items: center;
-  /* horizontal center */
   text-align: center;
-  color: #3e3d36;
+  color: #000000;
   font-size: 40px;
 }
 
 .purple {
-  color: #6d2932;
+  color: #99a57d;
 }
 
 .background-video {
@@ -197,7 +241,7 @@ hr {
   font-size: 3em;
   text-align: center;
   margin: 0;
-  color: #412f26;
+  color: #f77e0d;
 }
 
 .horizontal-layout {
@@ -239,7 +283,7 @@ hr {
 .para1,
 .para2 {
   font-size: 20px;
-  color: #3e3d38;
+  color: #99a57;
   font-family: 'Times New Roman', Times, serif;
 }
 
@@ -247,6 +291,9 @@ hr {
   display: flex;
   justify-content: flex-start;
   margin: 0 112px;
+    width: 90%;      /* Fluid width */
+  max-width: 1200px;
+  margin: auto;
 
 }
 
@@ -588,14 +635,11 @@ hr {
     opacity: 0.2;
   }
 }
-.third-section h2{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2.6em;
-  margin-bottom: 4px;
-  color: #412f26;
+.third-section {
+  text-align: center; /* center-align all inline content */
+  padding: 40px 20px; /* optional: add spacing around */
 }
+
 .third-section span{
   display: flex;
   justify-content: space-around;
@@ -883,10 +927,7 @@ hr {
 }
 
 
-.third-section {
-  text-align: center; /* center-align all inline content */
-  padding: 40px 20px; /* optional: add spacing around */
-}
+
 
 .button-wrapper {
   margin-top: 50px;        /* spacing from the span */
@@ -997,7 +1038,7 @@ html {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   frid-template-row: repeat(2, auto);
-  gap: 1rem;
+  gap: 2rem;
   padding: 1rem;
   justify-items: center;
   align-items: center;
@@ -1024,7 +1065,7 @@ html {
 
 .skill-card:hover {
   transform: scale(1.05);
-  background-color: antiquewhite;
+  background-color: rgb(70, 69, 68);
 }
 
 .skill-card svg {
@@ -1066,14 +1107,7 @@ html {
   opacity: 1;
   transform: translateY(0);
 }
-.fourth-section h2{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2.6em;
-  margin-bottom: 30px;
-  color: #412f26;
-}
+
 .title-card {
   font-size: 1em;
   font-weight: 400;
@@ -1089,7 +1123,8 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 35px;
+  margin: 40px;
 }
 .github-card {
   background-color: transparent;
@@ -1252,10 +1287,10 @@ html {
   color: #803e2f;
 }
 a{
-  color: #3e3d38;
+  color: #eb4604;
 }
 a:visited{
-  color: #883c46;
+  color: #eb4604;
 }
 a:hover{
   color: #383626;
